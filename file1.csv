@@ -1,0 +1,89 @@
+import csv
+import feedparser
+import pandas as pd
+from pandas import *
+
+#https://stackoverflow.com/questions/69276161/check-row-if-exist-in-csv-python
+import csv
+
+col_names = ["Position",
+            "Title",
+            "Link",
+            "Published",
+            "Summary"]
+feed_data = pd.read_csv("save_file.csv", index_col="id", usecols=col_names)
+
+def fetch_rss_data():
+    #feed_data = pd.read_csv("save_file.csv", index_col="id", usecols=col_names)
+# List of RSS feed URLs
+
+def rss_feed_append(url):
+    feed = feedparser.parse(url)
+
+
+    print("Feed Title:", feed.feed.title)
+
+    for entry in feed.entries:
+
+        print("Entry Title:", entry.title)
+        print("Entry Link:", entry.link)
+        print("Entry Published Date:", entry.published)
+        print("Entry Summary:", entry.summary)
+        print("\n")
+# List of RSS feed URLs
+
+rss_feed_urls = [
+    "https://nypost.com/feed/",
+    "https://feeds.nbcnews.com/nbcnews/public/news",
+]
+# Fetch data from multiple RSS feeds
+for url in rss_feed_urls:
+    rss_feed_append(url)
+
+
+#save_writer.writerow(['2', 'Accounting', 'November'])
+person = ['1', '2', '2']
+style = ['one', 'IT', 'March']
+month = ['March', 'November', 'March']
+dict = {'A': person, 'B': style, 'C': month}
+df = pd.DataFrame(dict)
+# saving the dataframe
+df.to_csv('save_file.csv', index=False, quoting=csv.QUOTE_ALL, header=False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#with open('save_file.csv', mode='a') as save_file: //APPEND
+#with open('save_file.csv', mode='w') as save_file:
+#    reader_obj = csv.reader(save_file)
+
+#    already_done = []
+
+    #save_writer = csv.writer(save_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
+
+    #save_writer.writerow(['2', 'Accounting', 'November'])
+    #save_writer.writerow(['2', 'IT', 'March'])
