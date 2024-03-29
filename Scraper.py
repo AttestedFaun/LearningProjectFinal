@@ -10,14 +10,6 @@ from bs4 import BeautifulSoup
 from bs4.element import Comment, NavigableString
 from urllib.parse import urlsplit, urlunsplit, urlparse
 
-#from html2text.html2text import HTML2Text
-
-
-#https://github.com/Alir3z4/html2text
-
-#binary = FirefoxBinary('/usr/bin/firefox')
-#browser = webdriver.Firefox(firefox_binary=binary)
-
 #NEEDED TO SATISFY   https://stackoverflow.com/questions/28172008/pycharm-visual-warning-about-unresolved-attribute-reference
 
 
@@ -71,7 +63,6 @@ def soupDecomp(toRemove):
 #https://stackoverflow.com/questions/41792761/calling-and-using-an-attribute-stored-in-variable-using-beautifulsoup-4
 
 
-
 def getSoup(url):
     ua = UserAgent()
     header = {'User-Agent':str(ua.chrome)}
@@ -86,8 +77,6 @@ def params(soup, args):
     for arg in args:
         print(arg)
     for arg in args:
-        #print(len(args))
-        #print(arg)
 
         key, value = arg
 
@@ -104,7 +93,6 @@ def getArticle(url):
     urlNetLoc = urlparse(url).netloc
     soup = getSoup(url)
     side = "0"
-
 
     if (urlNetLoc == 'www.foxnews.com'):
 
@@ -153,7 +141,6 @@ def getArticle(url):
             divs = soup.find_all('div', {'class': "video-info-module__text"})
         side = "2"
 
-
     elif(urlNetLoc == 'www.vox.com'):
         divs = soup.find_all('div', {'class': "c-entry-content"})
         side = "2"
@@ -163,7 +150,6 @@ def getArticle(url):
 
         soupDecomp(soup.find_all('div', {'class': "l-container"}))
         side = "1"
-
 
     elif(urlNetLoc == 'spectator.org'):
         divs = soup.find_all('div', {'class': "post-body print-only"})
@@ -194,5 +180,5 @@ links = {"foxnews" : "https://www.foxnews.com/politics/who-tom-suozzi-look-democ
          #"yahoo":"https://news.yahoo.com/auburn-heisman-trophy-winner-awarded-004926887.html?guccounter=1"
          }
 
-#print('NOW: ' + repr(getArticle(links.get("vox"))))
+print('NOW: ' + repr(getArticle(links.get("vox"))))
 

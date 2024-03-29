@@ -172,7 +172,7 @@ links = {"foxnews" : "https://www.foxnews.com/politics/who-tom-suozzi-look-democ
          "nypost":"https://nypost.com/2024/02/11/sports/taylor-swift-celebrates-chiefs-super-bowl-2024-win-over-49ers/",
          "nbcnews":"https://www.nbcnews.com/specials/israel-hamas-war-spread-gaza-pakistan-middle-east-region/index.html",
          "abcnews":"https://abcnews.go.com/Technology/wireStory/baby-boom-african-penguin-chicks-hatches-san-francisco-107078610",
-         "vox":"https://www.vox.com/politics/2024/2/13/24072287/lakewood-church-shooting-anti-trans-messaging",
+         "vox":"https://www.vox.com/politics/2024/2/1m3/24072287/lakewood-church-shooting-anti-trans-messaging",
          "theamericanconservative":"https://www.theamericanconservative.com/putin-supporter-covers-a-multitude-of-thought-crimes/",
          "":"",
          "":"",
