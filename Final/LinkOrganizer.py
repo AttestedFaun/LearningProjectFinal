@@ -6,6 +6,7 @@ from fastpunct import FastPunct
 
 import numpy as np
 #https://stackoverflow.com/questions/75367803/how-to-remove-spaces-in-a-single-word-bo-ok-to-book
+#https://github.com/geyang/deep-auto-punctuation
 
 import enchant
 
